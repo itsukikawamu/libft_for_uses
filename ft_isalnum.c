@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:47:50 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/25 10:49:25 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/25 15:45:12 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if (isalpha(c) && isdigit(c))
+	if (ft_isalpha(c) && ft_isdigit(c))
 		return (FT_ISALNUM);
 	return (0);
 }

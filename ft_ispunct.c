@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 11:03:32 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/25 11:22:05 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/25 15:45:12 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_ispunct(int c)
 {
-	if (isprint(c) && !isalnum(c) && c != ' ')
+	if (ft_isprint(c) && !ft_isalnum(c) && c != ' ')
 		return (FT_ISPUNCT);
 	return (0);
 }
