@@ -6,13 +6,13 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 10:54:42 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/25 10:59:38 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 07:23:44 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_supper(int c)
+int	ft_issupper(int c)
 {
 	if ('A' <= c && c <= 'Z')
 		return (FT_ISSUPPER);

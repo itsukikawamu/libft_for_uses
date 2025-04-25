@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:51:09 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/25 15:44:00 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 07:18:42 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 #define FT_ISPUNCT	0x4000
 #define FT_ISALNUM	0x8000
 
-int		ft_supper(int c);
+int		ft_issupper(int c);
 int		ft_islower(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

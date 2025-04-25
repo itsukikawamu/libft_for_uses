@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 11:37:38 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/25 11:41:28 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 07:21:23 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@ int	ft_isxdigit(int c)
 {
 	if (('0' <= c && c <= '9') || ('a' <= c && c <= 'f'))
 		return (FT_ISXDIGIT);
+	return (0);
 }
