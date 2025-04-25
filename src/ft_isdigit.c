@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 08:42:25 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/25 09:56:55 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/25 10:50:22 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	return ('0' <= c && c <= '9');
+	if ('0' <= c && c <= '9')
+		return (FT_ISDIGIT);
+	return (0);
 }

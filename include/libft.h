@@ -6,15 +6,19 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:51:09 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/25 10:47:57 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/25 10:58:53 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
+#define FT_ISSUPPER 0x01
+#define FT_ISLOWER 0x02
 #define FT_ISALPHA 0x20
 #define FT_ISDIGIT 0x30
 #define FT_ISALNUM 0x04
+#define FT_ISASCII 0x01
+#define FT_ISPRINT 0x07
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

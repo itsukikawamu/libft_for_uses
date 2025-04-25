@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 09:47:50 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/25 10:49:25 by ikawamuk         ###   ########.fr       */
+/*   Created: 2025/04/25 10:57:24 by ikawamuk          #+#    #+#             */
+/*   Updated: 2025/04/25 10:59:44 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int	ft_islower(int c)
 {
-	if (isalpha(c) && isdigit(c))
-		return (FT_ISALNUM);
+	if ('a' <= c && c <= 'z')
+		return (FT_ISLOWER);
 	return (0);
 }
