@@ -5,8 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 09:40:28 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/25 09:40:30 by ikawamuk         ###   ########.fr       */
+/*   Created: 2025/04/25 09:51:09 by ikawamuk          #+#    #+#             */
+/*   Updated: 2025/04/25 09:51:11 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
