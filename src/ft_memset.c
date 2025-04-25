@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 10:08:19 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/25 10:27:38 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/25 10:43:39 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*p;
 
 	p = (unsigned char *)s;
