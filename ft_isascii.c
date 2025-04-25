@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:55:02 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/25 10:50:44 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 07:32:17 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,17 @@ int	ft_isascii(int c)
 		return (FT_ISASCII);
 	return (0);
 }
+
+/*
+#include <stdio.h>
+int main(int argc, char* argv[])
+{
+	if(argc != 2)
+		return (1);
+	if (ft_isascii(argv[1][0]))
+		printf("it is ascii.\n");
+	else
+		printf("it isn't ascii.\n");
+	return (0);
+}
+*/
