@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 10:28:57 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/25 10:44:02 by ikawamuk         ###   ########.fr       */
+/*   Created: 2025/04/25 11:42:29 by ikawamuk          #+#    #+#             */
+/*   Updated: 2025/04/25 11:51:36 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	*memcpy(void *dest, const void *src, size_t n)
 {
-	size_t			i;
-	unsigned char	*p;
+	size_t	i;
+	char	*dp;
+	char	*sp;
 
-	p = (unsigned char *)s;
+	dp = (char *)dest;
+	sp = (char *)src;
 	i = 0;
 	while (i < n)
 	{
-		p[i] = '\0';
+		dp[i] = sp[i];
 		i++;
 	}
-	return (s);
+	return (dest);
 }

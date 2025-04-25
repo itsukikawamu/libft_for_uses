@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:51:09 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/25 11:40:34 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/25 11:51:46 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,4 @@ int		ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
 void	bzero(void *s, size_t n);
+void	*memcpy(void *dest, const void *src, size_t n);
