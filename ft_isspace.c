@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 11:22:42 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 07:37:30 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:54:28 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,35 @@ int	ft_isspace(int c)
 
 /*
 #include <stdio.h>
-int main(int argc, char* argv[])
+#include <assert.h>
+#include <limits.h>
+int main(void)
 {
-	if(argc != 2)
-		return (1);
-	if (ft_isspace(argv[1][0]))
-		printf("it is space.\n");
-	else
-		printf("it isn't space.\n");
+	assert(ft_isspace(' '));
+	assert(ft_isspace('\f'));
+	assert(ft_isspace('\n')); 
+	assert(ft_isspace('\r')); 
+	assert(ft_isspace('\t'));  
+	assert(ft_isspace('\v'));  
+	
+	assert(!ft_isspace('a'));
+	assert(!ft_isspace('z'));
+	assert(!ft_isspace('A'));
+	assert(!ft_isspace('Z'));
+	assert(!ft_isspace('0'));
+	assert(!ft_isspace('9'));
+	assert(!ft_isspace('/'));
+	assert(!ft_isspace(':'));
+	assert(!ft_isspace('@'));
+	assert(!ft_isspace('['));
+	assert(!ft_isspace('\''));
+	assert(!ft_isspace('{'));
+	assert(!ft_isspace(0));
+	assert(!ft_isspace(127));
+	assert(!ft_isspace(INT_MAX));
+	assert(!ft_isspace(INT_MIN));
+	
+	printf("all test passed\n");
 	return (0);
 }
 */

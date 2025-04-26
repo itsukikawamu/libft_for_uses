@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:55:02 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 07:32:17 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:36:57 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,29 @@ int	ft_isascii(int c)
 
 /*
 #include <stdio.h>
-int main(int argc, char* argv[])
+#include <assert.h>
+#include <limits.h>
+int main(void)
 {
-	if(argc != 2)
-		return (1);
-	if (ft_isascii(argv[1][0]))
-		printf("it is ascii.\n");
-	else
-		printf("it isn't ascii.\n");
+	assert(ft_isascii('a'));
+	assert(ft_isascii('z'));
+	assert(ft_isascii('A'));
+	assert(ft_isascii('Z'));
+	assert(ft_isascii('0'));
+	assert(ft_isascii('9'));
+	assert(ft_isascii('/'));
+	assert(ft_isascii(':'));
+	assert(ft_isascii('@'));
+	assert(ft_isascii('['));
+	assert(ft_isascii('\''));
+	assert(ft_isascii('{'));
+	assert(ft_isascii(0));
+	assert(ft_isascii(127));
+	
+	assert(!ft_isascii(INT_MAX));
+	assert(!ft_isascii(INT_MIN));
+	
+	printf("all test passed\n");
 	return (0);
 }
 */

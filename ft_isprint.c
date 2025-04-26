@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:58:10 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 07:38:21 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:41:53 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,30 @@ int	ft_isprint(int c)
 
 /*
 #include <stdio.h>
-int main(int argc, char* argv[])
+#include <assert.h>
+#include <limits.h>
+int main(void)
 {
-	if(argc != 2)
-		return (1);
-	if (ft_isprintable(argv[1][0]))
-		printf("it is printable.\n");
-	else
-		printf("it isn't printable.\n");
+	assert(ft_isprint('a'));
+	assert(ft_isprint('z'));
+	assert(ft_isprint('A'));
+	assert(ft_isprint('Z'));
+	assert(ft_isprint('0'));
+	assert(ft_isprint('9'));
+	assert(ft_isprint('/'));
+	assert(ft_isprint(':'));
+	assert(ft_isprint('@'));
+	assert(ft_isprint('['));
+	assert(ft_isprint('\''));
+	assert(ft_isprint('{'));
+
+	assert(!ft_isprint(0));
+	assert(!ft_isprint(31));
+	assert(!ft_isprint(127));
+	assert(!ft_isprint(INT_MAX));
+	assert(!ft_isprint(INT_MIN));
+	
+	printf("all test passed\n");
 	return (0);
 }
 */

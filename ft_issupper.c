@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 10:54:42 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 07:37:52 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:56:59 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,29 @@ int	ft_issupper(int c)
 
 /*
 #include <stdio.h>
-int main(int argc, char* argv[])
+#include <assert.h>
+#include <limits.h>
+int main(void)
 {
-	if(argc != 2)
-		return (1);
-	if (ft_issupper(argv[1][0]))
-		printf("it is supper.\n");
-	else
-		printf("it isn't supper.\n");
+	assert(ft_issupper('A'));
+	assert(ft_issupper('Z'));
+	
+	assert(!ft_issupper('a'));
+	assert(!ft_issupper('z'));
+	assert(!ft_issupper('0'));
+	assert(!ft_issupper('9'));
+	assert(!ft_issupper('/'));
+	assert(!ft_issupper(':'));
+	assert(!ft_issupper('@'));
+	assert(!ft_issupper('['));
+	assert(!ft_issupper('\''));
+	assert(!ft_issupper('{'));
+	assert(!ft_issupper(0));
+	assert(!ft_issupper(127));
+	assert(!ft_issupper(INT_MAX));
+	assert(!ft_issupper(INT_MIN));
+	
+	printf("all test passed\n");
 	return (0);
 }
 */

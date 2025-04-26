@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 11:37:38 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 10:11:54 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 11:01:05 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,41 @@
 
 int	ft_isxdigit(int c)
 {
-	if (('0' <= c && c <= '9') || ('a' <= c && c <= 'f'))
+	if (('0' <= c && c <= '9') || ('a' <= c && c <= 'f')
+	|| ('A' <= c && c <= 'F'))
 		return (FT_ISXDIGIT);
 	return (0);
 }
 
 /*
 #include <stdio.h>
-int main(int argc, char* argv[])
+#include <assert.h>
+#include <limits.h>
+int main(void)
 {
-	if(argc != 2)
-		return (1);
-	if (ft_isxdigit(argv[1][0]))
-		printf("it is xdigit.\n");
-	else
-		printf("it isn't xdigit.\n");
+	assert(ft_isxdigit('0'));
+	assert(ft_isxdigit('9'));
+	assert(ft_isxdigit('a'));
+	assert(ft_isxdigit('f'));
+	assert(ft_isxdigit('A'));
+	assert(ft_isxdigit('F'));
+
+	assert(!ft_isxdigit('g'));
+	assert(!ft_isxdigit('z'));
+	assert(!ft_isxdigit('G'));
+	assert(!ft_isxdigit('Z'));
+	assert(!ft_isxdigit('/'));
+	assert(!ft_isxdigit(':'));
+	assert(!ft_isxdigit('@'));
+	assert(!ft_isxdigit('['));
+	assert(!ft_isxdigit('\''));
+	assert(!ft_isxdigit('{'));
+	assert(!ft_isxdigit(0));
+	assert(!ft_isxdigit(127));
+	assert(!ft_isxdigit(INT_MAX));
+	assert(!ft_isxdigit(INT_MIN));
+	
+	printf("all test passed\n");
 	return (0);
 }
 */
