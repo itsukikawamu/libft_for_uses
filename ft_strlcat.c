@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 15:10:23 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 10:15:08 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 11:51:11 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (dst_len + src_len);
 }
 
-
+/*
 #include <stdio.h>
 int main(int argc, char *argv[])
 {
@@ -49,3 +49,4 @@ int main(int argc, char *argv[])
 	printf("return value: %zu\n", reval);
 	return 0;
 }
+*/
