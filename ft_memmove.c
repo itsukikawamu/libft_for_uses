@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 12:03:07 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 16:35:22 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 16:53:12 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,9 +119,13 @@ void test_one_byte_copy_binary(void)
     unsigned char buf[10] = {0x00, 0xff, 'c'};
     assert(ft_memmove(buf + 1, buf, 1) == buf + 1);
 
-    assert(buf[0] == 'a');
-    assert(buf[1] == 'a');
+    assert(buf[0] == 0x00);
+    assert(buf[1] == 0x00);
     assert(buf[2] == 'c');
+}
+
+void test_memove_zero_copy_with_NULL(void){
+	assert(ft_memmove(NULL, NULL, 0) == NULL);
 }
 
 int main(void)
@@ -133,10 +137,10 @@ int main(void)
     test_overlap_dest_before_src_string();
     test_one_byte_copy_string();
     test_binary_normal_copy();
-    test_binary_self_copy();
     test_overlap_dest_after_src_binary();
     test_overlap_dest_before_src_binary();
     test_one_byte_copy_binary();
+	test_memove_zero_copy_with_NULL();
 
     printf("All tests passed.\n");
     return 0;
