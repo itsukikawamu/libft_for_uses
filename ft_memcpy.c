@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 11:42:29 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 14:43:08 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 14:56:46 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,8 @@ int main(void)
     assert(ft_memcpy(dst4, src4, 100) == dst4);
 	assert(ft_memcmp(dst4, src4, sizeof(src4)) == 0);
 
-	unsigned char	src5[] = {'a', 'b', 'c', 'A', '_',0x00,  0x88, 0xff, 'a', 'b', 'c'};
+	unsigned char src5[] = {'a', 'b', 'c', 'A', '_' ,0x00,  0x88, 0xff, 
+							'a', 'b', 'c'};
 	int		n = 6;
 	int		size = 20;
 	unsigned char	dst5[size];
