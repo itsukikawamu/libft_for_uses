@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 10:08:19 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 08:59:23 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 11:40:38 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,30 +27,45 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-/*
+
 #include <stdio.h>
-#include <stdlib.h>
-int main(int argc, char *argv[])
+#include <assert.h>
+int main(void)
 {
-	if (argc != 3)
-		return (1);
-	size_t size = atoi(argv[1]);
-	char c = argv[2][0];
-	unsigned char *ptr = malloc(size);
-	if (!ptr)
-		return (1);
-	size_t i = 0;
-	while (i < size)
-	{
-		ptr[i] = i * 7 + 9;
-		printf("%02x ", ptr[i++]);
-	}
-	printf("%c", '\n');
-	ft_memset(ptr, (int)c, size);
-	i = 0;
-	while (i < size)
-		printf("%02x ", ptr[i++]);
-	free(ptr);
-	return (0);
+    char buf[10] = "AAAAAAAAAA";
+    ft_memset(buf, 'B', 5);
+    for (int i = 0; i < 5; i++)
+        assert(buf[i] == 'B');
+	for (int j = 5; j < 10; j++)
+        assert(buf[j] == 'A');
+
+
+    char buf2[5] = "1234";
+    ft_memset(buf2, 'B', 0);
+    assert(buf2[0] == '1');
+    assert(buf2[1] == '2');
+    assert(buf2[2] == '3');
+    assert(buf2[3] == '4');
+
+    char buf3[5] = "abcd";
+    ft_memset(buf3, 0, 4);
+    for (int i = 0; i < 4; i++)
+        assert(buf3[i] == '\0');
+
+    unsigned char buf4[5];
+    ft_memset(buf4, 255, 5);
+    for (int i = 0; i < 5; i++)
+        assert(buf4[i] == 0xFF);
+
+    char buf5[5];
+    void *ret = ft_memset(buf5, 'C', 5);
+    assert(ret == buf5);
+
+    char buf6[100];
+    ft_memset(buf6, 'X', 100);
+    for (int i = 0; i < 100; i++)
+        assert(buf6[i] == 'X');
+
+    printf("all tests passed\n");
+    return 0;
 }
-*/
