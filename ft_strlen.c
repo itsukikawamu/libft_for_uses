@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 10:02:06 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 11:13:24 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 11:26:50 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,19 @@ size_t	ft_strlen(const char *s)
 #include <limits.h>
 int main(void)
 {
-	assert(ft_isstrlen(""));
-	assert(ft_isstrlen(""));
-	assert(ft_isstrlen(""));
-	assert(ft_isstrlen(""));
+	assert(ft_strlen("A") == 1);
+	assert(ft_strlen("ABC") == 3);
+	assert(ft_strlen("abcdefghijklmnopqrstuvwxyz") == 26);
+	assert(ft_strlen("") == 0);
+	assert(ft_strlen("a\nb") == 3);
+	assert(ft_strlen("hello\tworld") == 11);
+	assert(ft_strlen("abc\0def") == 3);
 
-	assert(!ft_isstrlen(""));
-	assert(!ft_isstrlen(""));
-	assert(!ft_isstrlen(""));
-	assert(!ft_isstrlen(""));
-	assert(!ft_isstrlen(""));
-	assert(!ft_isstrlen(""));
-	assert(!ft_isstrlen(""'));
-	assert(!ft_isstrlen(""));
-
+	char long_str[101];
+	for (unsigned int i = 0; i < 100; i++)
+		long_str[i] = 'a';
+	long_str[100] = '\0';
+	assert(ft_strlen(long_str) == 100);
 
 	printf("all test passed\n");
 	return (0);
