@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 11:42:29 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 10:12:16 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 11:53:48 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,31 +29,50 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/*
+
 #include <stdio.h>
-#include <stdlib.h>
+#include <assert.h>
+
 int main(void)
 {
-	unsigned char	src[] = {'a', 'b', 'c', 'A', '_',0x00,  0x88, 0xff,};
-	int		n = sizeof(src);
-	int		size = 20;
-	unsigned char	dest[size];
-	int		i = 0;
+    char src1[] = "hello";
+    char dst1[6] = {0};
+    assert(ft_memcpy(dst1, src1, 6) == dst1);
+    for (int i = 0; i < 6; i++)
+        assert(dst1[i] == src1[i]);
 
-	ft_bzero(dest, size);
-	ft_memcpy(dest, src, n);
-	
-	printf("src:    ");
-	i = 0;
-	while (i < size)
-		printf("%02x ", src[i++]);
-	printf("\n");
-	
-	printf("after:  ");
-	i = 0;
-	while (i < size)
-		printf("%02x ", dest[i++]);
-	printf("\n");
-	return 0;
+    char src2[] = "abc";
+    char dst2[] = "xxx";
+    assert(ft_memcpy(dst2, src2, 0) == dst2);
+    assert(dst2[0] == 'x' && dst2[1] == 'x' && dst2[2] == 'x'); // 変わらない
+
+    // 3. 部分コピー
+    char src3[] = "world";
+    char dst3[] = "XXXXX";
+    assert(ft_memcpy(dst3, src3, 3) == dst3);
+    assert(dst3[0] == 'w');
+    assert(dst3[1] == 'o');
+    assert(dst3[2] == 'r');
+    assert(dst3[3] == 'X');
+    assert(dst3[4] == 'X');
+
+    // 4. 同じ配列内コピー（近い領域）
+    // memcpyは領域が重なっている場合、正しい動作は保証されない
+    // これはあくまで動作確認だけ（memmoveなら保証される）
+    char buf4[] = "ABCDE";
+    ft_memcpy(buf4 + 1, buf4, 4);
+    // 期待できないけど、一応動くか見る
+    // ただし標準では未定義動作なのであまり真剣にチェックしない
+
+    // 5. 長いデータ
+    char src5[100];
+    char dst5[100];
+    for (int i = 0; i < 100; i++)
+        src5[i] = (char)(i % 128);
+    assert(ft_memcpy(dst5, src5, 100) == dst5);
+    for (int i = 0; i < 100; i++)
+        assert(dst5[i] == src5[i]);
+
+    printf("all tests passed\n");
+    return 0;
 }
-*/

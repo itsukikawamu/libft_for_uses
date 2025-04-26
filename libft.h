@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:51:09 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 07:18:42 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 12:22:49 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,15 @@
 
 int		ft_issupper(int c);
 int		ft_islower(int c);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
 int		ft_isxdigit(int c);
 int		ft_isspace(int c);
+int		ft_ispunct(int c);
+int		ft_strcmp(char *s1, char *s2);
+
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
 int		ft_isprint(int c);
 int		ft_isascii(int c);
-int		ft_ispunct(int c);
 int		ft_isalnum(int c);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
