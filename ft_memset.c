@@ -27,7 +27,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-
+/*
 #include <stdio.h>
 #include <assert.h>
 int main(void)
@@ -69,3 +69,4 @@ int main(void)
     printf("all tests passed\n");
     return 0;
 }
+*/
