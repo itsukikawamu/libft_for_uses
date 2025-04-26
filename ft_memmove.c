@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 12:03:07 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 16:30:05 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 16:35:22 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void test_normal_string_copy(void)
     char src[] = "abcdef";
     char dst[10] = {0};
 
-    assert(ft_memmove(dst, src, 6) == dst);
+    assert(ft_memmove(dst, src, sizeof(src)) == dst);
     assert(memcmp(dst, "abcdef", sizeof(src)) == 0);
 }
 
@@ -60,20 +60,20 @@ void test_self_copy(void)
     assert(memcmp(buf, "abcdef", sizeof("abcdef")) == 0);
 }
 
-void test_overlap_dest_after_src_string(void)
-{
-    char buf[20] = "abcdef";
-
-    assert(ft_memmove(buf + 2, buf, 4) == buf + 2);
-    assert(memcmp(buf, "ababcd", 6) == 0);
-}
-
 void test_overlap_dest_before_src_string(void)
 {
     char buf[20] = "abcdef";
 
     assert(ft_memmove(buf, buf + 2, 4) == buf);
     assert(memcmp(buf, "cdefef", 6) == 0);
+}
+
+void test_overlap_dest_after_src_string(void)
+{
+    char buf[20] = "abcdef";
+
+    assert(ft_memmove(buf + 2, buf, 4) == buf + 2);
+    assert(memcmp(buf, "ababcd", 6) == 0);
 }
 
 void test_one_byte_copy_string(void)
@@ -92,15 +92,6 @@ void test_binary_normal_copy(void)
     assert(ft_memmove(dst, src, 8) == dst);
     for (int i = 0; i < 8; i++)
         assert(dst[i] == src[i]);
-}
-
-void test_binary_self_copy(void)
-{
-    unsigned char buf[] = {'a', 'b', 'c', 0x00, 0x11, 0x22};
-
-    assert(ft_memmove(buf, buf, 6) == buf);
-    for (int i = 0; i < 6; i++)
-        assert(buf[i] == buf[i]);
 }
 
 void test_overlap_dest_after_src_binary(void)
@@ -125,7 +116,7 @@ void test_overlap_dest_before_src_binary(void)
 
 void test_one_byte_copy_binary(void)
 {
-    unsigned char buf[10] = {'a', 'b', 'c'};
+    unsigned char buf[10] = {0x00, 0xff, 'c'};
     assert(ft_memmove(buf + 1, buf, 1) == buf + 1);
 
     assert(buf[0] == 'a');
