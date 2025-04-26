@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 04:31:25 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 10:34:49 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 11:13:32 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int main(void)
 	assert(!ft_isalpha(127));
 	assert(!ft_isalpha(INT_MAX));
 	assert(!ft_isalpha(INT_MIN));
+	
 	printf("all test passed\n");
 	return (0);
 }
