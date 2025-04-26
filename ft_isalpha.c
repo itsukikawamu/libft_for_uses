@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 04:31:25 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 07:30:58 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:34:49 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,28 @@ int	ft_isalpha(int c)
 
 /*
 #include <stdio.h>
-int main(int argc, char* argv[])
+#include <assert.h>
+#include <limits.h>
+int main(void)
 {
-	if(argc != 2)
-		return (1);
-	if (ft_isalpha(argv[1][0]))
-		printf("it is alpha.\n");
-	else
-		printf("it isn't alpha.\n");
+	assert(ft_isalpha('a'));
+	assert(ft_isalpha('z'));
+	assert(ft_isalpha('A'));
+	assert(ft_isalpha('Z'));
+
+	assert(!ft_isalpha('0'));
+	assert(!ft_isalpha('9'));
+	assert(!ft_isalpha('/'));
+	assert(!ft_isalpha(':'));
+	assert(!ft_isalpha('@'));
+	assert(!ft_isalpha('['));
+	assert(!ft_isalpha('\''));
+	assert(!ft_isalpha('{'));
+	assert(!ft_isalpha(0));
+	assert(!ft_isalpha(127));
+	assert(!ft_isalpha(INT_MAX));
+	assert(!ft_isalpha(INT_MIN));
+	printf("all test passed\n");
 	return (0);
 }
 */
