@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 11:42:29 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 08:43:36 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 09:36:15 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
-	unsigned char	*dp;
-	unsigned char	*sp;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	dp = (unsigned char *)dest;
-	sp = (unsigned char *)src;
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
 	i = 0;
 	while (i < n)
 	{
-		dp[i] = sp[i];
+		d[i] = s[i];
 		i++;
 	}
 	return (dest);
