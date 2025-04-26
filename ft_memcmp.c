@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 14:24:36 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 14:58:28 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 16:46:14 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	p1 = (unsigned char *)s1;
 	p2 = (unsigned char *)s2;
 	i = 0;
-	while (p1[i] != 0x00 && p2[i] != 0x00 && p1[i] == p2[i] && i < n)
+	if (n == 0)
+		return(0);
+	while (p1[i] == p2[i] && i < n)
 		i++;
 	return ((unsigned char)p1[i] - (unsigned char)p2[i]);
 }
@@ -39,43 +41,36 @@ void test_ft_memcmp(const char *s1, const char *s2) {
 		size = sizeof(s2);
     int expected = memcmp(s1, s2, size);
     int actual = ft_memcmp(s1, s2, size);
-    if ((expected == 0 && actual == 0) || (expected < 0 && actual < 0) 
-		|| (expected > 0 && actual > 0)) {
-        printf("OK : \"%s\" vs \"%s\"\n", s1, s2);
-    } else {
-        printf("NG : \"%s\" vs \"%s\"\n", s1, s2);
-        printf("Expected: %d, Actual: %d\n", expected, actual);
+    if (expected != actual)
         assert(0);
-    }
 }
 
 int main(void) {
     test_ft_memcmp("abc", "abc");
-
     test_ft_memcmp("abc", "xbc");
-
     test_ft_memcmp("abcdef", "abcxef");
-
     test_ft_memcmp("abc", "abcdef");
     test_ft_memcmp("abcdef", "abc");
-
     test_ft_memcmp("", "");
-
     test_ft_memcmp("", "abc");
     test_ft_memcmp("abc", "");
-
     test_ft_memcmp("ABC", "abc");
     test_ft_memcmp("abc", "ABC");
-
     test_ft_memcmp("abc!", "abc?");
     test_ft_memcmp("abc ", "abc!");
-
     test_ft_memcmp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 
 					"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
     test_ft_memcmp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 
 					"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab");
 
-    printf("all test passed\n");
+	assert(ft_memcmp("abc", "def", 0) == 0);
+	assert(ft_memcmp(NULL, NULL, 0) == 0);
+	assert(ft_memcmp(NULL, "abc", 0) == 0);
+	assert(ft_memcmp("abc", NULL, 0) == 0);
+	assert(ft_memcmp("ab\0cd", "ab\0cf", 5) < 0);
+	assert(ft_memcmp("ab\0cf", "ab\0cd", 5) > 0);
+
+	printf("all test passed\n");
     return 0;
 }
 */
