@@ -1,8 +1,6 @@
 NAME=libft.a
 SRCS=$(wildcard *.c)
-OBJS=$(patsubst %.c,obj/%.o,$(SRCS))
-
-INCDIR = include
+OBJS=$(patsubst %.c, obj/%.o, $(SRCS))
 
 all: $(NAME)
 
@@ -10,7 +8,7 @@ $(NAME): $(OBJS)
 	ar rcs $@ $^
 
 obj/%.o: %.c
-	cc -I$(INCDIR) -c $< -o $@
+	cc -c $< -o $@
 
 clean:
 	rm -f $(OBJS)

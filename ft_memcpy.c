@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 11:42:29 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 11:53:48 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 14:43:08 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-
+/*
 #include <stdio.h>
 #include <assert.h>
 
@@ -38,15 +38,13 @@ int main(void)
     char src1[] = "hello";
     char dst1[6] = {0};
     assert(ft_memcpy(dst1, src1, 6) == dst1);
-    for (int i = 0; i < 6; i++)
-        assert(dst1[i] == src1[i]);
+    assert(ft_memcmp(dst1, src1, sizeof(src1)) == 0);
 
     char src2[] = "abc";
     char dst2[] = "xxx";
     assert(ft_memcpy(dst2, src2, 0) == dst2);
-    assert(dst2[0] == 'x' && dst2[1] == 'x' && dst2[2] == 'x'); // 変わらない
+	assert(ft_memcmp(dst2, "xxx", 3) == 0);
 
-    // 3. 部分コピー
     char src3[] = "world";
     char dst3[] = "XXXXX";
     assert(ft_memcpy(dst3, src3, 3) == dst3);
@@ -56,23 +54,28 @@ int main(void)
     assert(dst3[3] == 'X');
     assert(dst3[4] == 'X');
 
-    // 4. 同じ配列内コピー（近い領域）
-    // memcpyは領域が重なっている場合、正しい動作は保証されない
-    // これはあくまで動作確認だけ（memmoveなら保証される）
-    char buf4[] = "ABCDE";
-    ft_memcpy(buf4 + 1, buf4, 4);
-    // 期待できないけど、一応動くか見る
-    // ただし標準では未定義動作なのであまり真剣にチェックしない
+    char src4[100];
+    char dst4[100];
+    for (int i = 0; i < 100; i++)
+        src4[i] = (char)(i % 128);
+    assert(ft_memcpy(dst4, src4, 100) == dst4);
+	assert(ft_memcmp(dst4, src4, sizeof(src4)) == 0);
 
-    // 5. 長いデータ
-    char src5[100];
-    char dst5[100];
-    for (int i = 0; i < 100; i++)
-        src5[i] = (char)(i % 128);
-    assert(ft_memcpy(dst5, src5, 100) == dst5);
-    for (int i = 0; i < 100; i++)
+	unsigned char	src5[] = {'a', 'b', 'c', 'A', '_',0x00,  0x88, 0xff, 'a', 'b', 'c'};
+	int		n = 6;
+	int		size = 20;
+	unsigned char	dst5[size];
+
+	ft_bzero(dst5, size);
+	assert(ft_memcpy(dst5, src5, n) == dst5);
+	
+    for (int i = 0; i < n; i++)
         assert(dst5[i] == src5[i]);
+
+    for (int i = n; i < size; i++)
+        assert(dst5[i] == 0x00);
 
     printf("all tests passed\n");
     return 0;
 }
+*/
