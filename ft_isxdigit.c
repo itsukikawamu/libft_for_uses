@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 11:37:38 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 07:38:04 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:11:54 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	ft_isxdigit(int c)
 		return (FT_ISXDIGIT);
 	return (0);
 }
-
 
 /*
 #include <stdio.h>
