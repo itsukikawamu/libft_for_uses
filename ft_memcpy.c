@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 11:42:29 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 14:56:46 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 16:48:34 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,10 @@ int main(void)
 
     for (int i = n; i < size; i++)
         assert(dst5[i] == 0x00);
+
+	assert(ft_memcpy(NULL, NULL, 0) == NULL);
+	assert(ft_memcpy(NULL, "abc", 0) == NULL);
+	assert(ft_memcpy("abc", NULL, 0) != NULL);
 
     printf("all tests passed\n");
     return 0;
