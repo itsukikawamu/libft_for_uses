@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 15:10:23 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 09:56:39 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:15:08 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,21 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
+}
+
+
+#include <stdio.h>
+int main(int argc, char *argv[])
+{
+	if (argc != 2)
+		return (1);
+	int		size = 10;
+	char	dst[size];
+
+
+	size_t	reval = ft_strlcat(dst, argv[1], size);
+	printf("src: %s\n", argv[1]);
+	printf("dst: %s\n", dst);
+	printf("return value: %zu\n", reval);
+	return 0;
 }

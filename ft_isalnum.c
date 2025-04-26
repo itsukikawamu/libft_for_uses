@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:47:50 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 07:29:24 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:29:42 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,28 @@ int	ft_isalnum(int c)
 
 /*
 #include <stdio.h>
-int main(int argc, char* argv[])
+#include <assert.h>
+#include <limits.h>
+int main(void)
 {
-	if(argc != 2)
-		return (1);
-	if (ft_isalnum(argv[1][0]))
-		printf("it is alnum.\n");
-	else
-		printf("it isn't alnum.\n");
+	assert(ft_isalnum('a'));
+	assert(ft_isalnum('z'));
+	assert(ft_isalnum('A'));
+	assert(ft_isalnum('Z'));
+	assert(ft_isalnum('0'));
+	assert(ft_isalnum('9'));
+	
+	assert(!ft_isalnum('/'));
+	assert(!ft_isalnum(':'));
+	assert(!ft_isalnum('@'));
+	assert(!ft_isalnum('['));
+	assert(!ft_isalnum('\''));
+	assert(!ft_isalnum('{'));
+	assert(!ft_isalnum(0));
+	assert(!ft_isalnum(127));
+	assert(!ft_isalnum(INT_MAX));
+	assert(!ft_isalnum(INT_MIN));
+	printf("all test passed\n");
 	return (0);
 }
 */
