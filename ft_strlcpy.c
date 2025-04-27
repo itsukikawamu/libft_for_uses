@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:28:40 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 10:11:28 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/27 12:33:00 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,40 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 /*
 #include <stdio.h>
-int main(int argc, char *argv[])
+#include <string.h>
+#include <assert.h>
+
+size_t ft_strlcpy(char *dst, const char *src, size_t size); // ←あなたの再実装関数
+
+int main(void)
 {
-	if (argc != 2)
-		return (1);
-	int		size = 10;
-	char	dst[size];
+    char buf[100];
 
+    strcpy(buf, "XXXXXXXX");
+    assert(ft_strlcpy(buf, "abc", 10) == 3);
+    assert(strcmp(buf, "abc") == 0);
 
-	size_t	reval = ft_strlcpy(dst, argv[1], size);
-	printf("src: %s\n", argv[1]);
-	printf("dst: %s\n", dst);
-	printf("return value: %zu\n", reval);
-	return 0;
+    strcpy(buf, "XXXXXXXX");
+    assert(ft_strlcpy(buf, "hello", 6) == 5);
+    assert(strcmp(buf, "hello") == 0);
+
+    strcpy(buf, "XXXXXXXX");
+    assert(ft_strlcpy(buf, "abcdef", 4) == 6);
+    assert(buf[0] == 'a' && buf[1] == 'b' && buf[2] == 'c' && buf[3] == '\0');
+
+    strcpy(buf, "XXXXXXXX");
+    assert(ft_strlcpy(buf, "test", 0) == 4);
+    assert(strcmp(buf, "XXXXXXXX") == 0); 
+
+    strcpy(buf, "XXXXXXXX");
+    assert(ft_strlcpy(buf, "", 5) == 0);
+    assert(buf[0] == '\0');
+
+    strcpy(buf, "abcdef");
+    assert(ft_strlcpy(buf, buf, 7) == 6);
+    assert(strcmp(buf, "abcdef") == 0);
+
+    printf("all tests passed.\n");
+    return 0;
 }
 */
