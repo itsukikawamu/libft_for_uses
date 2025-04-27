@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 13:39:55 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/27 14:59:16 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/27 15:01:04 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-
+/*
 #include <stdio.h>
 #include <assert.h>
 int main(void)
@@ -43,3 +43,4 @@ int main(void)
 
     printf("All tests passed!\n");
 }
+	*/
