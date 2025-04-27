@@ -18,4 +18,9 @@ fclean: clean
 
 re: fclean all
 
+so:
+	cc -Wall -Wextra -Werror -fPIC -c *.c
+	cc -shared -o libft.so *.o
+
+
 .PHONY: all clean fclean re
