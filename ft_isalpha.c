@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 04:31:25 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/27 12:14:25 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/27 13:31:49 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	ft_isalpha(int c)
 {
-	if (ft_issupper(c) || ft_islower(c))
+	if (ft_isupper(c) || ft_islower(c))
 		return (FT_ISALPHA);
 	return (0);
 }
 
-int	ft_issupper(int c)
+int	ft_isupper(int c)
 {
 	if ('A' <= c && c <= 'Z')
-		return (FT_ISSUPPER);
+		return (FT_ISUPPER);
 	return (0);
 }
 

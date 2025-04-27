@@ -6,13 +6,13 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:51:09 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/27 13:26:27 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/27 13:33:35 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-#define FT_ISSUPPER	0x0001
+#define FT_ISUPPER	0x0001
 #define FT_ISLOWER	0x0002
 #define FT_ISALPHA	0x0004
 #define FT_ISDIGIT	0x0008
@@ -23,7 +23,7 @@
 #define FT_ISPUNCT	0x4000
 #define FT_ISALNUM	0x8000
 
-int		ft_issupper(int c);
+int		ft_isupper(int c);
 int		ft_islower(int c);
 int		ft_isxdigit(int c);
 int		ft_isspace(int c);
@@ -43,5 +43,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_toupper(int c);
+int		ft_tolower(int c);
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
