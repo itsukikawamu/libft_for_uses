@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 19:13:34 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 08:00:11 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 08:10:10 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 
 /*
 #include <assert.h>
+#include <stdio.h>
 int main(void)
 {
 	char *p1 = "hello";
@@ -64,9 +65,15 @@ int main(void)
 	char *p4 = "hi";
 	
 	char *rev2 = ft_strnstr(p3, p4, 10);
-	assert(rev1 == NULL);
+	assert(rev2 == NULL);
 
-	char *p3 = NULL;
-	char *p4 = NULL;
+	char *p5 = NULL;
+	char *p6 = NULL;
+	
+	char *rev3 = ft_strnstr(p5, p6, 10);
+	assert(rev3 == NULL);
+
+	printf("passed\n");
+	return (0);
 }
-	*/
+*/
