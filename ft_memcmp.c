@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 14:24:36 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 16:46:14 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/27 13:18:55 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	p2 = (unsigned char *)s2;
 	i = 0;
 	if (n == 0)
-		return(0);
+		return (0);
 	while (p1[i] == p2[i] && i < n)
 		i++;
 	return ((unsigned char)p1[i] - (unsigned char)p2[i]);
