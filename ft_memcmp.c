@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 14:24:36 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/27 13:18:55 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/27 17:27:21 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,54 +23,66 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (p1[i] == p2[i] && i < n)
+	while (i < n)
+	{
+		if (p1[i] != p2[i])
+			return ((unsigned char)p1[i] - (unsigned char)p2[i]);
 		i++;
-	return ((unsigned char)p1[i] - (unsigned char)p2[i]);
+	}
+	return (0);
 }
+
 
 /*
-#include <stdio.h>
-#include <string.h>
 #include <assert.h>
-
-void test_ft_memcmp(const char *s1, const char *s2) {
-	size_t size;
-	if (sizeof(s1) < sizeof(s2))
-		size = sizeof(s1);
-	else
-		size = sizeof(s2);
-    int expected = memcmp(s1, s2, size);
-    int actual = ft_memcmp(s1, s2, size);
-    if (expected != actual)
-        assert(0);
-}
-
-int main(void) {
-    test_ft_memcmp("abc", "abc");
-    test_ft_memcmp("abc", "xbc");
-    test_ft_memcmp("abcdef", "abcxef");
-    test_ft_memcmp("abc", "abcdef");
-    test_ft_memcmp("abcdef", "abc");
-    test_ft_memcmp("", "");
-    test_ft_memcmp("", "abc");
-    test_ft_memcmp("abc", "");
-    test_ft_memcmp("ABC", "abc");
-    test_ft_memcmp("abc", "ABC");
-    test_ft_memcmp("abc!", "abc?");
-    test_ft_memcmp("abc ", "abc!");
-    test_ft_memcmp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 
-					"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-    test_ft_memcmp("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 
-					"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab");
-
-	assert(ft_memcmp("abc", "def", 0) == 0);
-	assert(ft_memcmp(NULL, NULL, 0) == 0);
-	assert(ft_memcmp(NULL, "abc", 0) == 0);
-	assert(ft_memcmp("abc", NULL, 0) == 0);
-	assert(ft_memcmp("ab\0cd", "ab\0cf", 5) < 0);
-	assert(ft_memcmp("ab\0cf", "ab\0cd", 5) > 0);
-
-	printf("all test passed\n");
-    return 0;
+#include <stdio.h>
+int main(void)
+{
+	{
+		char s1[] = "abcabc";
+		char s2[] = "abcxyz";
+		assert(ft_memcmp(s1, s2, 3) == 0);
+		assert(ft_memcmp(s1, s2, 6) < 0);
+		assert(ft_memcmp(s2, s1, 6) > 0);
+	}
+	{
+		char s1[] = "hello";
+		char s2[] = "hello";
+		assert(ft_memcmp(s1, s2, 3) == 0);
+		assert(ft_memcmp(s1, s2, 5) == 0);
+	}
+	{
+		char s1[] = {'a', '\0', 'b'};
+		char s2[] = {'a', '\0', 'b'};
+		assert(ft_memcmp(s1, s2, 3) == 0);
+	}	
+	{
+		char s1[] = {'a', 'b', '\0', 'd', 'e'};
+		char s2[] = {'a', 'b', '\0', 'x', 'y'};
+		assert(ft_memcmp(s1, s2, 3) == 0);
+		assert(ft_memcmp(s1, s2, 4) < 0);
+		assert(ft_memcmp(s2, s1, 4) > 0);
+	}
+	{
+		char s1[] = "abcde";
+		char s2[] = "abc";
+		assert(ft_memcmp(s1, s2, 3) == 0);
+		assert(ft_memcmp(s1, s2, 5) > 0);
+		assert(ft_memcmp(s2, s1, 5) < 0);
+	}
+	{
+		char s1[] = "abc";
+		char s2[] = "xyz";
+		assert(ft_memcmp(s1, s2, 0) == 0);
+	}
+	{
+		unsigned char s1[] = {0x01, 0xFF, 0x03};
+		unsigned char s2[] = {0x01, 0x00, 0x03};
+		assert(ft_memcmp(s1, s2, 2) > 0);
+		assert(ft_memcmp(s2, s1, 2) < 0);
+	}
+	
+	printf("all tests passed.\n");
+	return (0);
 }
 */
