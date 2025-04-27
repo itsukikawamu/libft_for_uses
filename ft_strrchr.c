@@ -6,7 +6,39 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 15:00:43 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/27 15:00:51 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/27 15:07:05 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
+{
+	int	len;
+
+	len = ft_strlen(s);
+	while (len >= 0)
+	{
+		if (s[len] == (char)c)
+			return ((char *)&s[len]);
+		len--;
+	}
+	return (NULL);
+}
+
+/*
+#include <stdio.h>
+#include <assert.h>
+int main(void)
+{
+	const char *str = "hello";
+    assert(ft_strrchr(str, 'e') == str + 1); 
+    assert(ft_strrchr(str, 'l') == str + 3);
+    assert(ft_strrchr(str, 'o') == str + 4);
+    assert(ft_strrchr(str, 'x') == NULL);
+    assert(ft_strrchr(str, '\0') == str + 5);
+    assert(ft_strrchr("", 'a') == NULL);
+
+    printf("All tests passed!\n");
+}
+*/
