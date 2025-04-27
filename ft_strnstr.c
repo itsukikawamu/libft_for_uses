@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 19:13:34 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 07:48:38 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 08:00:11 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,21 +49,24 @@ int	ft_strcmp(const char *s1, const char *s2)
 	return (0);
 }
 
-
-#include <stdio.h>
+/*
+#include <assert.h>
 int main(void)
 {
 	char *p1 = "hello";
 	char *p2 = "ll";
 	
 	char *rev1 = ft_strnstr(p1, p2, 10);
-	printf("%s\n", rev1);
+	assert(rev1 == p1 + 2);
 
 
 	char *p3 = "yes";
 	char *p4 = "hi";
 	
 	char *rev2 = ft_strnstr(p3, p4, 10);
-	printf("%s\n", rev2);
+	assert(rev1 == NULL);
 
+	char *p3 = NULL;
+	char *p4 = NULL;
 }
+	*/
