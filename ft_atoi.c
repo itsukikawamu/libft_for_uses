@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 08:00:55 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 08:47:49 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 08:48:45 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_atoi(const char *nptr)
 	if(ft_issign(nptr[i]))
 	{
 		if (nptr[i] == '-')
-			sign *= -1;
+			sign = -1;
 		i++;
 	}
 	result = 0;
