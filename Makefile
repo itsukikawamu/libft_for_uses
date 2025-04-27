@@ -22,8 +22,9 @@ re: fclean all
 bonus:
 	@echo "no bonus"
 
-so:
-	@echo "no shared object"
+so: $(OBJS)
+	gcc -shared -o libft.so $(OBJS)
+
 
 
 .PHONY: all clean fclean re
