@@ -6,21 +6,21 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 22:42:13 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 00:29:10 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 06:10:02 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static void		make_numstr(int n, char *arr, size_t size);
-static size_t	count_digit(int n);
+size_t	ft_count_digits(int n);
 
 char	*ft_itoa(int n)
 {
 	char	*res;
 	size_t	digit;
 
-	digit = count_digit(n);
+	digit = ft_count_digits(n);
 	res = ft_calloc(digit + 1, sizeof(char));
 	if (!res)
 		return (NULL);
@@ -53,7 +53,7 @@ static void	make_numstr(int nbr, char *arr, size_t size)
 		arr[size] = '-';
 }
 
-static size_t	count_digit(int n)
+size_t	ft_count_digits(int n)
 {
 	size_t	digit;
 
