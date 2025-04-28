@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 22:24:06 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 22:43:12 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 00:46:43 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ char	*ft_strndup(const char *s, size_t len);
 char	*ft_strncpy(char *dst, const char *src, size_t size);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
