@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 14:24:36 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/27 17:27:21 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 10:15:44 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
 
 /*
 #include <assert.h>

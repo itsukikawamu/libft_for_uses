@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 08:00:55 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 08:48:45 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 10:20:23 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_atoi(const char *nptr)
 	while (ft_isspace(nptr[i]))
 		i++;
 	sign = 1;
-	if(ft_issign(nptr[i]))
+	if (ft_issign(nptr[i]))
 	{
 		if (nptr[i] == '-')
 			sign = -1;
@@ -39,7 +39,7 @@ int	ft_atoi(const char *nptr)
 
 int	ft_issign(int c)
 {
-	if(c == '+' || c == '-')
+	if (c == '+' || c == '-')
 		return (FT_ISSIGN);
 	return (0);
 }

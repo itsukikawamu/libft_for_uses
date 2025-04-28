@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 15:08:06 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/27 18:07:02 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 10:18:24 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		if (s1[i] != s2[i])
 			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		if (s1[i] == '\0')
-			return 0;
+			return (0);
 		i++;
 	}
 	return (0);

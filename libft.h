@@ -6,12 +6,14 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:51:09 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 08:51:14 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 09:30:08 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdbool.h>
+#include <limits.h>
+#include <stdio.h>
+#include <stdint.h>
 
 #define FT_ISUPPER	0x0001
 #define FT_ISLOWER	0x0002
@@ -58,3 +60,4 @@ int		ft_atoi(const char *nptr);
 int		ft_isspace(int c);
 int		ft_issign(int c);
 void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);

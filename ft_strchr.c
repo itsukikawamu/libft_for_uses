@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 13:39:55 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/27 15:01:39 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 10:18:13 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	int	i;
 	int	len;
 
 	len = ft_strlen(s);

@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 13:20:06 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/27 18:49:00 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 10:16:05 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_toupper(int c)
 {
 	if (ft_islower(c))
 		c += ('A' - 'a');
-	return c;
+	return (c);
 }
 
 /*
