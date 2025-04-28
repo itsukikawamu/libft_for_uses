@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:51:09 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 08:38:26 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 08:51:14 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,3 +57,4 @@ int		ft_strcmp(const char *s1, const char *s2);
 int		ft_atoi(const char *nptr);
 int		ft_isspace(int c);
 int		ft_issign(int c);
+void	*ft_calloc(size_t nmemb, size_t size);

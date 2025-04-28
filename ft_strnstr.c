@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 19:13:34 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 08:10:10 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 09:02:36 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,38 +15,24 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	l_len;
-	char	*b;
+	size_t	i;
 	
 	if (*little == '\0')
 		return ((char *)big);
 
 	l_len = ft_strlen(little);
-	b = (char *)big;
-	while (l_len <= len && *b != '\0')
+	i = 0;
+	while (l_len <= len && big[i] != '\0')
 	{
-		if (*b == *little)
+		if (big[i] == *little)
 		{
-			if (ft_strcmp(b, little) == 0)
-				return (b);
+			if (ft_strncmp(&big[i], little, l_len) == 0)
+				return (&big[i]);
 		}
-		b++;
+		i++;
 		len--;
 	}
 	return (NULL);
-}
-
-int	ft_strcmp(const char *s1, const char *s2)
-{
-	size_t	i;
-
-	i = 0;
-	while (s1[i] && s2[i])
-	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
-	}
-	return (0);
 }
 
 /*
