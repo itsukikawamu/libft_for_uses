@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 22:24:06 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 06:10:13 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 06:26:24 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,24 +20,30 @@
 # include <assert.h>
 # include <unistd.h>
 
-# define FT_ISUPPER	0x0001
-# define FT_ISLOWER	0x0002
-# define FT_ISALPHA	0x0004
-# define FT_ISDIGIT	0x0008
+# define FT_ISUPPER		0x0001
+# define FT_ISLOWER		0x0002
+# define FT_ISALPHA		0x0004
+# define FT_ISDIGIT		0x0008
 # define FT_ISXDIGIT	0x0010
-# define FT_ISSPACE	0x0020
-# define FT_ISPRINT	0x0040
-# define FT_ISASCII	0x0080
-# define FT_ISSIGN	0x0100
-# define FT_ISPUNCT	0x4000
-# define FT_ISALNUM	0x8000
+# define FT_ISSPACE		0x0020
+# define FT_ISPRINT		0x0040
+# define FT_ISASCII		0x0080
+# define FT_ISSIGN		0x0100
+# define FT_ISPUNCT		0x4000
+# define FT_ISALNUM		0x8000
+
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
+
 /*
 int		ft_isxdigit(int c);
 
 int		ft_ispunct(int c);
 
 */
-
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
@@ -82,5 +88,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+
 
 #endif
