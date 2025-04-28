@@ -1,27 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 10:36:11 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 11:07:59 by ikawamuk         ###   ########.fr       */
+/*   Created: 2025/04/28 10:58:34 by ikawamuk          #+#    #+#             */
+/*   Updated: 2025/04/28 11:10:00 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*sub;
+	size_t	len;
+	char	*res;
 
-	sub = ft_calloc(len + 1, sizeof(char));
-	if (!sub)
+	len = ft_strlen(s1) + ft_strlen(s2);
+	res = ft_calloc(len + 1, sizeof(char));
+	if (!res)
 		return (NULL);
-	if (start < ft_strlen(s))
-		ft_strlcpy(sub, s + start, len + 1);
-	else
-		*sub = '\0';
-	return (sub);
+	ft_strcpy(res, s1);
+	ft_strcat(res, s2);
+	return (res);
+}
+
+char	*ft_strcat(char *dest, const char *src)
+{
+	size_t	i;
+	size_t	dest_len;
+
+	dest_len = ft_strlen(dest);
+	i = 0;
+	while (src[i])
+	{
+		dest[dest_len + i] = src[i];
+		i++;
+	}
+	dest[dest_len + i] = '\0';
+	return (dest);
 }

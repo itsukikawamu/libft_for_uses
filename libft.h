@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:51:09 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 10:37:15 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 11:04:39 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,3 +64,5 @@ char	*ft_strdup(const char *s);
 char	*ft_strcpy(char *dest, const char *src);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strcat(char *dest, const char *src);
