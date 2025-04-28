@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:51:09 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 11:04:39 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 19:20:03 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <limits.h>
 #include <stdio.h>
 #include <stdint.h>
+#include <assert.h>
 
 #define FT_ISUPPER	0x0001
 #define FT_ISLOWER	0x0002
@@ -66,3 +67,6 @@ char	*ft_strcpy(char *dest, const char *src);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strcat(char *dest, const char *src);
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strndup(const char *s, size_t len);
+char	*ft_strncpy(char *dst, const char *src, size_t size);
