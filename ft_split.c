@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 19:52:54 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 22:39:49 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 00:42:49 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,3 +81,28 @@ static size_t	count_words(char *p, char c)
 	}
 	return (nwords);
 }
+
+/*
+int main(void)
+{
+	char **arr;
+	int	i = 0;
+	arr = ft_split("aaa", 'a');
+	while (arr[i])
+	{
+		printf("%d: %s\n", i, arr[i]); 
+		i++;
+	}
+	free_all(arr);
+
+	i = 0;
+	arr = ft_split("ab cd ef ", "\0");
+	while (arr[i])
+	{
+		printf("%d: %s\n", i, arr[i]); 
+		i++;
+	}
+	free_all(arr);
+	return (0);
+}
+	*/
