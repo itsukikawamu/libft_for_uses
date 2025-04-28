@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 22:24:06 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 06:26:24 by ikawamuk         ###   ########.fr       */
+/*   Created: 2025/04/29 07:35:41 by ikawamuk          #+#    #+#             */
+/*   Updated: 2025/04/29 07:36:25 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@
 
 typedef struct s_list
 {
-void *content;
-struct s_list *next;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 /*
 int		ft_isxdigit(int c);
@@ -74,10 +74,11 @@ char	*ft_strdup(const char *s);
 char	*ft_strcpy(char *dest, const char *src);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+size_t	ft_strnlen(const char *s, size_t maxlen);
+char	*ft_strndup(const char *s, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strtrim(char const *s1, char const *set);
-char	*ft_strndup(const char *s, size_t len);
 char	*ft_strncpy(char *dst, const char *src, size_t size);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
@@ -88,7 +89,4 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-
-
-
 #endif
