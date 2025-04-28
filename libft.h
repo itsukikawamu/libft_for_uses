@@ -5,31 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 09:51:09 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 20:26:32 by ikawamuk         ###   ########.fr       */
+/*   Created: 2025/04/28 22:24:06 by ikawamuk          #+#    #+#             */
+/*   Updated: 2025/04/28 22:24:17 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stdlib.h>
-#include <limits.h>
-#include <stdio.h>
-#include <stdint.h>
-#include <assert.h>
+# include <stdlib.h>
+# include <limits.h>
+# include <stdio.h>
+# include <stdint.h>
+# include <assert.h>
 
-#define FT_ISUPPER	0x0001
-#define FT_ISLOWER	0x0002
-#define FT_ISALPHA	0x0004
-#define FT_ISDIGIT	0x0008
-#define FT_ISXDIGIT	0x0010
-#define FT_ISSPACE	0x0020
-#define FT_ISPRINT	0x0040
-#define FT_ISASCII	0x0080
-#define FT_ISSIGN	0x0100
-#define FT_ISPUNCT	0x4000
-#define FT_ISALNUM	0x8000
+# define FT_ISUPPER	0x0001
+# define FT_ISLOWER	0x0002
+# define FT_ISALPHA	0x0004
+# define FT_ISDIGIT	0x0008
+# define FT_ISXDIGIT	0x0010
+# define FT_ISSPACE	0x0020
+# define FT_ISPRINT	0x0040
+# define FT_ISASCII	0x0080
+# define FT_ISSIGN	0x0100
+# define FT_ISPUNCT	0x4000
+# define FT_ISALNUM	0x8000
 /*
 int		ft_isxdigit(int c);
 

@@ -6,14 +6,15 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 19:52:54 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 22:16:46 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 22:39:49 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static size_t	count_words(char *p, char c);
-static void	*free_all(char **arr);
+static void		*free_all(char **arr);
+static char		*find_head(char *p, char c);
 
 char	**ft_split(char const *s, char c)
 {
@@ -23,22 +24,32 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 
 	p = (char *)s;
-	arr = ft_calloc(count_words(p, c), sizeof(char*));
+	arr = ft_calloc(count_words(p, c) + 1, sizeof(char *));
 	if (!arr)
 		return (NULL);
 	i = 0;
 	while (*p)
 	{
-		while (*p && *p == c)
-			p++;
+		p = find_head(p, c);
 		head = p;
 		while (*p && *p != c)
 			p++;
 		if (head < p)
+		{
 			arr[i] = ft_strndup(head, p - head);
+			if (!arr[i++])
+				return (free_all(arr));
+		}
 	}
 	arr[i] = NULL;
 	return (arr);
+}
+
+static char	*find_head(char *p, char c)
+{
+	while (*p && *p == c)
+		p++;
+	return (p);
 }
 
 static void	*free_all(char **arr)
