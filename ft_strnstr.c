@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 19:13:34 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 04:22:04 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 05:11:52 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	if (*little == '\0')
 		return ((char *)big);
+	if (len == 0)
+		return (NULL);
 	l_len = ft_strlen(little);
 	i = 0;
-	while (l_len <= len && big[i])
+	while (big[i] && l_len <= len)
 	{
 		if (big[i] == *little)
 		{

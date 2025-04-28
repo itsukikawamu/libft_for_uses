@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 12:03:07 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 03:31:17 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 05:12:49 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
-
 
 	if (n == 0 || dest == src)
 		return (dest);
@@ -30,14 +29,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			d[n] = s[n];
 	}
 	return (dest);
-}
-
-
-#include <string.h>
-int main(void)
-{
-	printf("%p\n", memmove(((void*)0), ((void*)0), 5));
-	return (0);
 }
 
 /*
