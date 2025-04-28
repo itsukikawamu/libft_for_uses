@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 22:24:06 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 04:17:43 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 05:54:42 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdio.h>
 # include <stdint.h>
 # include <assert.h>
+# include <unistd.h>
 
 # define FT_ISUPPER	0x0001
 # define FT_ISLOWER	0x0002
