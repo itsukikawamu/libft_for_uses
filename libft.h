@@ -6,9 +6,12 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:51:09 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 19:20:03 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/28 20:26:32 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef LIBFT_H
+# define LIBFT_H
 
 #include <stdlib.h>
 #include <limits.h>
@@ -56,7 +59,6 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
-int		ft_strcmp(const char *s1, const char *s2);
 int		ft_atoi(const char *nptr);
 int		ft_isspace(int c);
 int		ft_issign(int c);
@@ -70,3 +72,6 @@ char	*ft_strcat(char *dest, const char *src);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strndup(const char *s, size_t len);
 char	*ft_strncpy(char *dst, const char *src, size_t size);
+char	**ft_split(char const *s, char c);
+
+#endif
