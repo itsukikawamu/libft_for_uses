@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 19:52:54 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/30 00:46:29 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/30 08:35:47 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	while (*s)
 	{
-		while (c && *s == c)
+		while (*s && *s == c)
 			s++;
-		head = s;
+		head = (char *)s;
 		while (*s && *s != c)
 			s++;
 		if (head == s)
