@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:36:11 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 21:31:10 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 22:01:30 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ static char		*ft_strncpy(char *dst, const char *src, size_t n);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*sub;
 	size_t	sub_len;
-	char	*rev;
 
+	if (!s)
+		return (NULL);
 	if (start > ft_strlen(s))
 		return (ft_strdup(""));
 	sub_len = ft_strnlen(s + start, len);
@@ -63,11 +63,17 @@ static char	*ft_strncpy(char *dst, const char *src, size_t n)
 	return (dst);
 }
 
-/*
+
 int main(void){
-	char *s = ;
-	size_t i = ;
-	size_t len = ;
-	ft_substr();
+	char *s = "abcdefghi";
+	size_t i = 3;
+	size_t len = 3;
+	printf("%s\n", ft_substr(s, i, len));
+	s = "abcd";
+	printf("%s\n", ft_substr(s, i, len));
+	s = "ab";
+	printf("%s\n", ft_substr(s, i, len));
+	s = NULL;
+	printf("%s\n", ft_substr(s, i, len));
+	
 }
-*/
