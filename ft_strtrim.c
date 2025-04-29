@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 11:10:55 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 21:07:53 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 22:13:18 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	const char	*tail;
 
+	if (!s1 || !set)
+		return (NULL);
 	tail = s1 + ft_strlen(s1);
 	while (ft_strchr(set, *s1) != NULL)
 	{
@@ -67,6 +69,12 @@ int main(void)
 	printf("result: %0x\n", (int)s[0]);
 	assert(!ft_strncmp("", s, 1));
 	
+	s = ft_strtrim("aaa", "\0");
+	printf("result: %0x\n", (int)s[0]);
+	assert(!ft_strncmp("aaa", s, 1));
+	
+	s = ft_strtrim("aaa", NULL);
+	printf("%s\n", s);
 	return (0);
 }
 */

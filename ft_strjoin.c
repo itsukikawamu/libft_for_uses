@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:58:34 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 21:09:28 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 22:05:56 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len;
 	char	*res;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
 	res = ft_calloc(len + 1, sizeof(char));
 	if (!res)

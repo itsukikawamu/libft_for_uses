@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:36:11 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 22:01:30 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 22:04:13 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static char	*ft_strncpy(char *dst, const char *src, size_t n)
 	return (dst);
 }
 
-
+/*
 int main(void){
 	char *s = "abcdefghi";
 	size_t i = 3;
@@ -74,6 +74,6 @@ int main(void){
 	s = "ab";
 	printf("%s\n", ft_substr(s, i, len));
 	s = NULL;
-	printf("%s\n", ft_substr(s, i, len));
-	
+	printf("%s\n", ft_substr(s, i, len));	
 }
+*/

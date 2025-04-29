@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 19:52:54 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 21:20:30 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 23:20:16 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 static size_t	count_words(char *p, char c);
 static void		*free_all(char **arr);
-static char		*find_head(char *p, char c);
 static char		*ft_strndup(const char *s, size_t len);
 
 char	**ft_split(char const *s, char c)
@@ -24,6 +23,8 @@ char	**ft_split(char const *s, char c)
 	char	*head;
 	size_t	i;
 
+	if (!s)
+		return (0);
 	p = (char *)s;
 	arr = ft_calloc(count_words(p, c) + 1, sizeof(char *));
 	if (!arr)
@@ -31,16 +32,14 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	while (*p)
 	{
-		p = find_head(p, c);
+		while (*p && *p == c)
+			p++;
 		head = p;
 		while (*p && *p != c)
 			p++;
-		if (head < p)
-		{
-			arr[i] = ft_strndup(head, p - head);
-			if (!arr[i++])
-				return (free_all(arr));
-		}
+		arr[i] = ft_strndup(head, p - head);
+		if (!arr[i++])
+			return (free_all(arr));
 	}
 	arr[i] = NULL;
 	return (arr);
@@ -63,13 +62,6 @@ static char	*ft_strndup(const char *s, size_t len)
 	while (i < len)
 		rev[i++] = '\0';
 	return (rev);
-}
-
-static char	*find_head(char *p, char c)
-{
-	while (*p && *p == c)
-		p++;
-	return (p);
 }
 
 static void	*free_all(char **arr)
