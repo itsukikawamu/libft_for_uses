@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 07:35:41 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 07:36:25 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 10:09:56 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,7 @@ typedef struct s_list
 
 /*
 int		ft_isxdigit(int c);
-
 int		ft_ispunct(int c);
-
 */
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -89,4 +87,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+t_list	*ft_lstnew(void *content);
+
 #endif
