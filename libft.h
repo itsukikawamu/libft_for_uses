@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 07:35:41 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 19:26:48 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 19:33:52 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ int		ft_issign(int c);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 char	*ft_strcpy(char *dest, const char *src);
-
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strnlen(const char *s, size_t maxlen);
 char	*ft_strndup(const char *s, size_t len);
