@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:36:11 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 07:34:24 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 20:37:58 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (ft_strndup(s + start, sub_len));
 }
 
-char	*ft_strndup(const char *s, size_t len)
+static char	*ft_strndup(const char *s, size_t len)
 {
 	char	*rev;
 

@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 08:00:55 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 20:18:40 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 20:36:28 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ int	ft_atoi(const char *nptr)
 	return (result);
 }
 
-int	ft_issign(int c)
+ static int	ft_issign(int c)
 {
 	if (c == '+' || c == '-')
 		return (FT_ISSIGN);
 	return (0);
 }
 
-int	ft_isspace(int c)
+static int	ft_isspace(int c)
 {
 	if (c == ' ')
 		return (FT_ISSPACE);

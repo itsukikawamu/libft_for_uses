@@ -6,14 +6,14 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 22:42:13 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 06:23:06 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 20:36:25 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static void		make_numstr(int n, char *arr, size_t size);
-size_t			ft_count_digits(int n);
+static size_t			ft_count_digits(int n);
 
 char	*ft_itoa(int n)
 {
@@ -53,7 +53,7 @@ static void	make_numstr(int nbr, char *arr, size_t size)
 		arr[size] = '-';
 }
 
-size_t	ft_count_digits(int n)
+static size_t	ft_count_digits(int n)
 {
 	size_t	digit;
 
