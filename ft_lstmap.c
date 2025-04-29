@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 12:06:01 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 15:18:21 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 16:04:46 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new_list);
 }
 
-
-
+/*
 void *lstmap_f(void *content);
 
 int main(void)
@@ -58,3 +57,4 @@ void *lstmap_f(void *content)
         return NULL;
     return ft_strdup((char *)content);
 }
+*/
