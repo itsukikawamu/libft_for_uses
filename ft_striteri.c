@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 01:05:26 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 02:59:51 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/30 00:40:08 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	while (s[i])
 	{
