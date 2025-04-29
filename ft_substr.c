@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:36:11 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 21:09:16 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 21:31:10 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,3 +62,12 @@ static char	*ft_strncpy(char *dst, const char *src, size_t n)
 		dst[i++] = '\0';
 	return (dst);
 }
+
+/*
+int main(void){
+	char *s = ;
+	size_t i = ;
+	size_t len = ;
+	ft_substr();
+}
+*/
