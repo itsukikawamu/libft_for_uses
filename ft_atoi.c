@@ -6,11 +6,15 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 08:00:55 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 20:36:28 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 21:00:53 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_isspace(int c);
+static int	ft_issign(int c);
+static char	*ft_strcpy(char *dest, const char *src);
 
 int	ft_atoi(const char *nptr)
 {
@@ -37,7 +41,7 @@ int	ft_atoi(const char *nptr)
 	return (result);
 }
 
- static int	ft_issign(int c)
+static int	ft_issign(int c)
 {
 	if (c == '+' || c == '-')
 		return (FT_ISSIGN);
@@ -61,6 +65,19 @@ static int	ft_isspace(int c)
 	return (0);
 }
 
+static char	*ft_strcpy(char *dest, const char *src)
+{
+	size_t	i;
+
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
 /*s
 #include <stdlib.h>
 int main(void)

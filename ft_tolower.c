@@ -6,17 +6,26 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 13:29:02 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 10:16:11 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 21:21:58 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_isupper(int c);
 
 int	ft_tolower(int c)
 {
 	if (ft_isupper(c))
 		c -= ('A' - 'a');
 	return (c);
+}
+
+static int	ft_isupper(int c)
+{
+	if ('A' <= c && c <= 'Z')
+		return (FT_ISUPPER);
+	return (0);
 }
 
 /*

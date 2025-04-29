@@ -6,13 +6,17 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:58:34 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 20:37:14 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 21:09:28 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static char	*ft_strcpy(char *dest, const char *src);
+static char	*ft_strcat(char *dest, const char *src);
+
 char	*ft_strjoin(char const *s1, char const *s2)
+
 {
 	size_t	len;
 	char	*res;
@@ -39,5 +43,19 @@ static char	*ft_strcat(char *dest, const char *src)
 		i++;
 	}
 	dest[dest_len + i] = '\0';
+	return (dest);
+}
+
+static char	*ft_strcpy(char *dest, const char *src)
+{
+	size_t	i;
+
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
 	return (dest);
 }

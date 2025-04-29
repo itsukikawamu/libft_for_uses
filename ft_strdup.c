@@ -6,11 +6,13 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 09:21:41 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 20:36:23 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 20:57:52 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*ft_strcpy(char *dest, const char *src);
 
 char	*ft_strdup(const char *s)
 {

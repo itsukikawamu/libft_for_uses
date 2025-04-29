@@ -6,11 +6,14 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 04:31:25 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 20:36:27 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 20:56:27 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_isupper(int c);
+static int	ft_islower(int c);
 
 int	ft_isalpha(int c)
 {
