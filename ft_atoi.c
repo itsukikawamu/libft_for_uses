@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 08:00:55 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/28 10:20:23 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 20:18:40 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,3 +60,12 @@ int	ft_isspace(int c)
 		return (FT_ISSPACE);
 	return (0);
 }
+
+/*s
+#include <stdlib.h>
+int main(void)
+{
+	printf("%d\n",atoi("9223372036854775808"));
+	printf("%d\n",ft_atoi("9223372036854775808"));
+}
+*/
