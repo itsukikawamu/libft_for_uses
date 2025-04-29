@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 07:35:41 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 10:09:56 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/04/29 10:58:10 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,6 @@
 # define FT_ISSIGN		0x0100
 # define FT_ISPUNCT		0x4000
 # define FT_ISALNUM		0x8000
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
 
 /*
 int		ft_isxdigit(int c);
@@ -88,6 +82,13 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
