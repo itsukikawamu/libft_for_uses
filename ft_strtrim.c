@@ -6,14 +6,13 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 11:10:55 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 22:13:18 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/05/02 22:23:01 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static char	*ft_strndup(const char *s, size_t len);
-static char	*ft_strncpy(char *dst, const char *src, size_t n);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -40,22 +39,8 @@ static char	*ft_strndup(const char *s, size_t len)
 	rev = ft_calloc(len + 1, sizeof(char));
 	if (rev == NULL)
 		return (NULL);
-	return ((char *)ft_strncpy(rev, s, len));
-}
-
-static char	*ft_strncpy(char *dst, const char *src, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (src[i] && i < n)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	while (i < n)
-		dst[i++] = '\0';
-	return (dst);
+	ft_strlcpy(rev, s, len + 1);
+	return (rev);
 }
 
 /*

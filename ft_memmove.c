@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 12:03:07 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 05:12:49 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/05/02 20:09:32 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		ft_memcpy(d, s, n);
 	else
 	{
-		while (0 < n--)
+		while (n--)
 			d[n] = s[n];
 	}
 	return (dest);

@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 15:21:25 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/27 17:53:52 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/05/02 20:06:29 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (p[i] == (unsigned char)c)
-			return (&p[i]);
+			return (p + i);
 		i++;
 	}
 	return (NULL);

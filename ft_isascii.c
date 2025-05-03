@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:55:02 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 10:36:57 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/05/02 19:30:00 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isascii(int c)
 {
-	if (0x00 <= c && c <= 0x7f)
+	if (0 <= c && c <= 127)
 		return (FT_ISASCII);
 	return (0);
 }

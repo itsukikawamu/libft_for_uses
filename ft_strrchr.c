@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 15:00:43 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 03:58:12 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/05/02 21:54:35 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strrchr(const char *s, int c)
 	int	len;
 
 	len = ft_strlen(s);
-	while (len >= 0)
+	while (len + 1 > 0)
 	{
 		if (s[len] == (char)c)
-			return ((char *)&s[len]);
+			return ((char *)(s + len));
 		len--;
 	}
 	return (NULL);

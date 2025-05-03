@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 11:50:37 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/26 11:50:47 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/05/02 20:10:40 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	p = (unsigned char *)s;
 	i = 0;
 	while (i < n)
-	{
-		p[i] = c;
-		i++;
-	}
+		p[i++] = c;
 	return (s);
 }
 

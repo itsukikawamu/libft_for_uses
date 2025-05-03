@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 19:52:54 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/30 08:35:47 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/05/02 22:53:55 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,7 @@ static char	*ft_strndup(const char *s, size_t len)
 		rev[i] = s[i];
 		i++;
 	}
-	while (i < len)
-		rev[i++] = '\0';
+	rev[i] = '\0';
 	return (rev);
 }
 

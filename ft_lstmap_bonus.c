@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 12:06:01 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 16:04:46 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/05/02 21:38:17 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,16 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
 	t_list	*p;
+	void	*tmp;
 
 	new_list = NULL;
 	while (lst)
 	{
-		p = ft_lstnew(f(lst->content));
+		tmp = f(lst->content);
+		p = ft_lstnew(tmp);
 		if (!p)
 		{
+			del(tmp);
 			ft_lstclear(&new_list, del);
 			return (NULL);
 		}

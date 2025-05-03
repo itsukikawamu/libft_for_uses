@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 06:02:57 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 06:22:49 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/05/02 20:53:11 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	c;
-	long	nb;
-	int		div;
+	char		c;
+	long long	nb;
+	long long	div;
 
-	nb = (long)n;
+	nb = (long long)n;
 	if (nb < 0)
 	{
 		write(fd, "-", 1);
@@ -35,3 +35,12 @@ void	ft_putnbr_fd(int n, int fd)
 		div /= 10;
 	}
 }
+/*
+int main(void)
+{
+	int n = INT_MIN;
+	unsigned int u;
+
+	printf("%d\n");
+}
+	*/

@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 07:35:41 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 21:08:58 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/05/03 01:02:26 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <limits.h>
-# include <stdio.h>
 # include <stdint.h>
-# include <assert.h>
 # include <unistd.h>
 
 # define FT_ISUPPER		0x0001

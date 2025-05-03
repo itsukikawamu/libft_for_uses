@@ -6,15 +6,14 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 08:00:55 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 21:00:53 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/05/02 19:45:02 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static int	ft_isspace(int c);
-static int	ft_issign(int c);
-static char	*ft_strcpy(char *dest, const char *src);
+static int	issign(int c);
 
 int	ft_atoi(const char *nptr)
 {
@@ -26,7 +25,7 @@ int	ft_atoi(const char *nptr)
 	while (ft_isspace(nptr[i]))
 		i++;
 	sign = 1;
-	if (ft_issign(nptr[i]))
+	if (issign(nptr[i]))
 	{
 		if (nptr[i] == '-')
 			sign = -1;
@@ -41,7 +40,7 @@ int	ft_atoi(const char *nptr)
 	return (result);
 }
 
-static int	ft_issign(int c)
+static int	issign(int c)
 {
 	if (c == '+' || c == '-')
 		return (FT_ISSIGN);
@@ -50,34 +49,11 @@ static int	ft_issign(int c)
 
 static int	ft_isspace(int c)
 {
-	if (c == ' ')
-		return (FT_ISSPACE);
-	if (c == '\f')
-		return (FT_ISSPACE);
-	if (c == '\n')
-		return (FT_ISSPACE);
-	if (c == '\r')
-		return (FT_ISSPACE);
-	if (c == '\t')
-		return (FT_ISSPACE);
-	if (c == '\v')
+	if ((c == ' ') || (9 <= c && c <= 13))
 		return (FT_ISSPACE);
 	return (0);
 }
 
-static char	*ft_strcpy(char *dest, const char *src)
-{
-	size_t	i;
-
-	i = 0;
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
 /*s
 #include <stdlib.h>
 int main(void)

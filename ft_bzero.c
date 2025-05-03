@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 10:28:57 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/27 18:51:27 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/05/02 19:29:28 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,7 @@ void	ft_bzero(void *s, size_t n)
 	p = (unsigned char *)s;
 	i = 0;
 	while (i < n)
-	{
-		p[i] = '\0';
-		i++;
-	}
+		p[i++] = '\0';
 }
 
 /*

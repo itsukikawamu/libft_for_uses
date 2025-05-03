@@ -6,7 +6,7 @@
 /*   By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 09:21:41 by ikawamuk          #+#    #+#             */
-/*   Updated: 2025/04/29 20:57:52 by ikawamuk         ###   ########.fr       */
+/*   Updated: 2025/05/02 21:47:48 by ikawamuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *s)
 	rev = ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (rev == NULL)
 		return (NULL);
-	return ((char *)ft_strcpy(rev, s));
+	return (ft_strcpy(rev, s));
 }
 
 static char	*ft_strcpy(char *dest, const char *src)

@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ikawamuk <ikawamuk@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/05/03 01:01:35 by ikawamuk          #+#    #+#              #
+#    Updated: 2025/05/03 01:02:11 by ikawamuk         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME=libft.a
 SRCS =	ft_strlen.c \
 		ft_strlcpy.c \
@@ -44,15 +56,18 @@ BONUS_SRCS=	ft_lstnew_bonus.c \
 	 ft_lstiter_bonus.c \
 	 ft_lstmap_bonus.c
 BONUS_OBJS=$(patsubst %.c, obj/%.o, $(BONUS_SRCS))
+CC=cc
+CFLAGS=-Wall -Wextra -Werror -fPIC 
+AR=ar
 
 all: $(NAME)
 
 $(NAME): $(OBJS) 
-	ar rcs $@ $^
+	$(AR) rcs $@ $^
 
 obj/%.o: %.c
 	@mkdir -p obj
-	cc -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
@@ -63,9 +78,9 @@ fclean: clean
 re: fclean all
 
 bonus: $(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+	$(AR) rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 so: bonus
-	gcc -shared -o libft.so $(OBJS) $(BONUS_OBJS)
+	$(CC) -shared -o libft.so $(OBJS) $(BONUS_OBJS)
 
 .PHONY: all clean fclean re bonus so
